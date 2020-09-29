@@ -10,8 +10,17 @@ SQL_GET_STUDIES = """
     ; 
 """
 
+def get_studies():
+  student_id = request_id('student')
+
+  # Student ID needs to be a string??!
+  rows = select_data(SQL_GET_STUDIES, str(student_id))
+
+  for row in rows:
+        print(row) 
+
+
 if __name__ == "__main__":
-    student_id = request_id('student')
-    rows = select_data(SQL_GET_STUDIES, str(student_id)) # Student ID needs to be a string??!
-    for row in rows:
-        print(row)
+  get_studies()
+    
+    
