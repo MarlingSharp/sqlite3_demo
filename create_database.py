@@ -11,7 +11,7 @@ SQL_CREATE_STUDENT_TABLE = """ CREATE TABLE student (
 SQL_CREATE_SUBJECT_TABLE = """ CREATE TABLE subject (
                                     id integer PRIMARY KEY,
                                     name text NOT NULL,
-                                    teacher integer NOT NULL
+                                    teacher text NOT NULL
                             ); """
 SQL_CREATE_STUDIES_TABLE = """ CREATE TABLE studies (
                                 student_id integer,

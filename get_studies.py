@@ -17,7 +17,7 @@ def get_studies():
   rows = select_data(SQL_GET_STUDIES, str(student_id))
 
   for row in rows:
-        print(row) 
+    print(row) 
 
 
 if __name__ == "__main__":
