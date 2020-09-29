@@ -7,6 +7,7 @@ from insert_student import insert_student
 from insert_studies import insert_studies
 from insert_subject import insert_subject
 from delete_student import delete_student
+from delete_subject import delete_subject
 from common import run_any_select, run_any_execute
 
 db_functions = [
@@ -20,6 +21,7 @@ db_functions = [
   ('Insert Subject', insert_subject),
   ('Insert Subject', insert_subject),
   ('Delete Student', delete_student),
+  ('Delete Subject', delete_subject),
   ('Run SELECT SQL', run_any_select),
   ('Run INSERT/UPDATE/DELETE SQL', run_any_execute),
 ]

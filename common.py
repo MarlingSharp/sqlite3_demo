@@ -26,7 +26,7 @@ def select_data(sql, criteria=()):
           conn.close()
 
 
-def execute_sql(sql, data):
+def execute_sql(sql, data=()):
     conn = None
     try:
         conn = sqlite3.connect(DB_FILENAME)

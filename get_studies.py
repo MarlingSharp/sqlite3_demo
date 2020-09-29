@@ -14,7 +14,7 @@ def get_studies():
   student_id = request_id('student')
 
   # Student ID needs to be a string??!
-  rows = select_data(SQL_GET_STUDIES, str(student_id))
+  rows = select_data(SQL_GET_STUDIES, (student_id, ))
 
   for row in rows:
     print(row) 

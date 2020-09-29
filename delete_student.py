@@ -10,8 +10,10 @@ SQL_DELETE_STUDENT = """
 
 def delete_student():
   student_id = request_id('student')
-  d = (str(student_id))
+  d = (student_id,)
 
-  # Clean up studies first
+  # Clean up 'studies' first
   execute_sql(SQL_DELETE_STUDIES, d)
+
+  # Now we can safely delete the student
   execute_sql(SQL_DELETE_STUDENT, d)
