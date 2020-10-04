@@ -1,7 +1,7 @@
 from common import select_data, request_id
 
 SQL_GET_STUDIES = """
-    SELECT student.name, subject.name FROM student
+    SELECT student.name, subject.name, studies.target_grade FROM student
     INNER JOIN studies ON
         student.id = studies.student_id
     INNER JOIN subject ON
